@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free summons review — intake | SummonsDesk</title>
+<meta name="description" content="Fill in a few details and this page builds an email draft. Nothing is sent to a server.">
+<link rel="canonical" href="https://nydds.github.io/summonsdesk/intake.html">
+<link rel="alternate" hreflang="ko" href="https://nydds.github.io/summonsdesk/ko/intake.html">
+<link rel="alternate" hreflang="en" href="https://nydds.github.io/summonsdesk/intake.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b1f3a'/><text x='16' y='22' font-family='sans-serif' font-size='15' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+<link rel="stylesheet" href="/summonsdesk/assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/summonsdesk/"><span class="mark">S</span><span>SummonsDesk<small>OATH summons defense · Queens</small></span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/summonsdesk/#price">Pricing</a>
+      <a href="/summonsdesk/#faq">FAQ</a>
+      <a class="lang" href="/summonsdesk/ko/intake.html" hreflang="ko" lang="ko">한국어</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Free summons review</span>
+      <h2>One photo of the ticket is enough</h2>
+      <p>Fill this in and the page builds an <strong>email draft</strong>. Nothing here is sent to a server — you check it in your mail app and send it yourself.</p>
+    </div>
+
+    <form class="intake" id="intake" novalidate>
+      <div class="two">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Jane Doe">
+        </div>
+        <div class="field">
+          <label for="biz">Business name</label>
+          <input id="biz" name="biz" placeholder="e.g. Miso Kimbap">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="respondent">Respondent named on the ticket</label>
+        <input id="respondent" name="respondent" placeholder="Name or company on the summons">
+        <span class="hint">Often the building owner rather than the store. Leave it blank if unsure — we check the original.</span>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="address">Store address</label>
+          <input id="address" name="address" placeholder="132-45 41 Ave, Flushing NY">
+        </div>
+        <div class="field">
+          <label for="zip">ZIP code</label>
+          <input id="zip" name="zip" inputmode="numeric" placeholder="11355">
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="tickets">Ticket number(s)</label>
+          <input id="tickets" name="tickets" placeholder="014274922K, 035728393J">
+        </div>
+        <div class="field">
+          <label for="hearing">Hearing date (if known)</label>
+          <input id="hearing" name="hearing" type="date">
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="agency">Agency (if known)</label>
+          <select id="agency" name="agency">
+            <option value="">Not sure</option>
+            <option>Sanitation (DSNY)</option>
+            <option>Health (DOHMH)</option>
+            <option>Fire (FDNY)</option>
+            <option>Buildings (DOB)</option>
+            <option>Environmental (DEP)</option>
+            <option>Police (NYPD)</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="amount">Amount (if known)</label>
+          <input id="amount" name="amount" inputmode="numeric" placeholder="e.g. 700">
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="phone">Phone / text</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(917) 000-0000">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="me@example.com">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="notes">What happened</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="e.g. Same ticket last year, missed one hearing, photos available."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="lang">Preferred language</label>
+        <select id="lang" name="lang">
+          <option>Korean</option>
+          <option>English</option>
+          <option>Either</option>
+        </select>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button class="btn btn-primary" type="submit">Build email draft</button>
+        <button class="btn btn-ghost" type="button" id="copy" hidden>Copy text</button>
+        <span class="small" id="status" aria-live="polite"></span>
+      </div>
+      <p class="form-note">
+        Attach the ticket photo (front and back) in the mail app that opens. Do not include a Social Security number, date of birth or bank details — we never ask for them.
+      </p>
+    </form>
+  </div>
+</section>
+
+<section style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="notice">
+      <h3>Before you send</h3>
+      <ul class="checklist yes">
+        <li>This page stores and transmits nothing. The draft is built in your browser only.</li>
+        <li>Check the draft in your mail app, attach the ticket photo, then send it yourself.</li>
+        <li>Within one business day you get the charge explained, the deadline, the expected default amount and the expected saving.</li>
+        <li>Stopping after the free review is fine. You decide afterwards.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-legal" style="border-top:0;margin-top:0;padding-top:0">
+      SummonsDesk is not a law firm and does not provide legal advice. We are not affiliated with OATH and do not guarantee dismissal, reduction or vacatur.
+      Free help: OATH Help Center (212) 436-0845 · Manhelpcenter@oath.nyc.gov · SBS BEST 888-SBS-4NYC.
+      © 2026 SummonsDesk · <a href="/summonsdesk/">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('intake');
+  var status = document.getElementById('status');
+  var copyBtn = document.getElementById('copy');
+  var lastText = '';
+  var EMAIL = 'caremyshop.team@gmail.com';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    var lines = [
+      '[SummonsDesk free summons review]',
+      '',
+      'Name: ' + (v('name') || '-'),
+      'Business: ' + (v('biz') || '-'),
+      'Respondent on ticket: ' + (v('respondent') || '-'),
+      'Store address: ' + (v('address') || '-') + ' ' + v('zip'),
+      'Ticket number(s): ' + (v('tickets') || '-'),
+      'Hearing date: ' + (v('hearing') || '-'),
+      'Agency: ' + (v('agency') || 'Not sure'),
+      'Amount: ' + (v('amount') || '-'),
+      'Contact: ' + (v('phone') || '-') + ' / ' + (v('email') || '-'),
+      'Preferred language: ' + v('lang'),
+      '',
+      'What happened:',
+      (v('notes') || '-'),
+      '',
+      '(Ticket photos attached / will attach)'
+    ];
+    lastText = lines.join('\n');
+    var subject = '[Summons review] ' + (v('biz') || v('name') || 'Inquiry') + ' · ' + (v('zip') || '');
+    var href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lastText);
+    copyBtn.hidden = false;
+    status.textContent = 'Opening your mail app — attach the ticket photo and send.';
+    window.location.href = href;
+  });
+
+  copyBtn.addEventListener('click', function () {
+    if (!lastText) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(lastText).then(function () {
+        status.textContent = 'Copied. Paste it into your mail app.';
+      }, function () { status.textContent = 'Copy was blocked — select and copy manually.'; });
+    } else {
+      status.textContent = 'Automatic copy is not available in this browser.';
+    }
+  });
+})();
+</script>
+</body>
+</html>

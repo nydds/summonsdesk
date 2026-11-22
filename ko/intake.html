@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>무료 소환 점검 — 인테이크 | SummonsDesk</title>
+<meta name="description" content="소환장 사진과 기본 정보를 적으면 이메일 초안이 만들어집니다. 서버로 전송되는 정보는 없습니다.">
+<link rel="canonical" href="https://nydds.github.io/summonsdesk/ko/intake.html">
+<link rel="alternate" hreflang="en" href="https://nydds.github.io/summonsdesk/intake.html">
+<link rel="alternate" hreflang="ko" href="https://nydds.github.io/summonsdesk/ko/intake.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b1f3a'/><text x='16' y='22' font-family='sans-serif' font-size='15' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+<link rel="stylesheet" href="/summonsdesk/assets/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/summonsdesk/ko/"><span class="mark">S</span><span>SummonsDesk<small>소환 방어 데스크 · Queens</small></span></a>
+    <nav class="nav-links" aria-label="주요 메뉴">
+      <a href="/summonsdesk/ko/#price">가격</a>
+      <a href="/summonsdesk/ko/#faq">자주 묻는 질문</a>
+      <a class="lang" href="/summonsdesk/intake.html" hreflang="en" lang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">무료 소환 점검</span>
+      <h2>소환장 사진 한 장이면 시작됩니다</h2>
+      <p>아래에 적으면 <strong>이메일 초안</strong>이 만들어집니다. 이 페이지는 서버로 아무것도 보내지 않습니다 — 내용은 사장님 메일 앱에서 확인하고 직접 보내시면 됩니다.</p>
+    </div>
+
+    <form class="intake" id="intake" novalidate>
+      <div class="two">
+        <div class="field">
+          <label for="name">이름</label>
+          <input id="name" name="name" autocomplete="name" placeholder="홍길동">
+        </div>
+        <div class="field">
+          <label for="biz">상호 (매장 이름)</label>
+          <input id="biz" name="biz" placeholder="예: 미소 김밥">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="respondent">소환장에 적힌 당사자 (응답자)</label>
+        <input id="respondent" name="respondent" placeholder="영문 이름 또는 법인명">
+        <span class="hint">건물주 이름으로 되어 있는 경우가 많습니다. 모르시면 비워두세요 — 저희가 원본에서 확인합니다.</span>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="address">매장 주소</label>
+          <input id="address" name="address" placeholder="132-45 41 Ave, Flushing NY 11355">
+        </div>
+        <div class="field">
+          <label for="zip">우편번호</label>
+          <input id="zip" name="zip" inputmode="numeric" placeholder="11355">
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="tickets">소환번호 (모르면 비워두세요)</label>
+          <input id="tickets" name="tickets" placeholder="014274922K, 035728393J">
+        </div>
+        <div class="field">
+          <label for="hearing">심리일 (아는 경우)</label>
+          <input id="hearing" name="hearing" type="date">
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="agency">기관 (아는 경우)</label>
+          <select id="agency" name="agency">
+            <option value="">모르겠음</option>
+            <option>위생국 (DSNY)</option>
+            <option>보건국 (DOHMH)</option>
+            <option>소방청 (FDNY)</option>
+            <option>건물국 (DOB)</option>
+            <option>환경국 (DEP)</option>
+            <option>경찰 (NYPD)</option>
+            <option>기타</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="amount">금액 (아는 경우)</label>
+          <input id="amount" name="amount" inputmode="numeric" placeholder="예: 700">
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="phone">전화·문자</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(917) 000-0000">
+        </div>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="me@example.com">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="notes">상황 메모</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="예: 작년에도 같은 소환이 있었고, 심리를 한 번 놓쳤습니다. 사진은 따로 보내겠습니다."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="lang">연락 언어</label>
+        <select id="lang" name="lang">
+          <option>한국어</option>
+          <option>영어</option>
+          <option>둘 다</option>
+        </select>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <button class="btn btn-primary" type="submit">이메일 초안 만들기</button>
+        <button class="btn btn-ghost" type="button" id="copy" hidden>내용 복사</button>
+        <span class="small" id="status" aria-live="polite"></span>
+      </div>
+      <p class="form-note">
+        소환장 사진(앞·뒤)은 초안이 열린 메일 앱에 <strong>첨부</strong>해 주세요. 사진이 있으면 무료 점검이 훨씬 정확해집니다.
+        SSN·생년월일·계좌번호는 적지 마세요 — 저희도 요구하지 않습니다.
+      </p>
+    </form>
+  </div>
+</section>
+
+<section style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="notice">
+      <h3>보내기 전에</h3>
+      <ul class="checklist yes">
+        <li>이 페이지는 정보를 저장·전송하지 않습니다. 작성한 내용은 브라우저 안에서만 이메일 초안으로 만들어집니다.</li>
+        <li>메일이 열리면 내용을 확인하고, 소환장 사진을 첨부한 뒤 직접 보내주세요.</li>
+        <li>1영업일 안에 위반 내용·기한·디폴트 예상액·기대 절감액을 정리해 답장드립니다.</li>
+        <li>무료 점검만으로 끝내셔도 됩니다. 진행 여부는 그다음에 결정하세요.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-legal" style="border-top:0;margin-top:0;padding-top:0">
+      SummonsDesk는 변호사가 아니며 법률 자문을 제공하지 않습니다. OATH의 공식 기관이 아니고, 기각·감면·디폴트 취소를 보장하지 않습니다.
+      무료 지원: OATH Help Center (212) 436-0845 · Manhelpcenter@oath.nyc.gov · SBS BEST 888-SBS-4NYC.
+      © 2026 SummonsDesk · <a href="/summonsdesk/ko/">홈으로</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('intake');
+  var status = document.getElementById('status');
+  var copyBtn = document.getElementById('copy');
+  var lastText = '';
+  var EMAIL = 'caremyshop.team@gmail.com';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+    var lines = [
+      '[SummonsDesk 무료 소환 점검 요청]',
+      '',
+      '이름: ' + (v('name') || '-'),
+      '상호: ' + (v('biz') || '-'),
+      '소환장 당사자(응답자): ' + (v('respondent') || '-'),
+      '매장 주소: ' + (v('address') || '-') + ' ' + v('zip'),
+      '소환번호: ' + (v('tickets') || '-'),
+      '심리일: ' + (v('hearing') || '-'),
+      '기관: ' + (v('agency') || '모르겠음'),
+      '금액: ' + (v('amount') || '-'),
+      '연락처: ' + (v('phone') || '-') + ' / ' + (v('email') || '-'),
+      '연락 언어: ' + v('lang'),
+      '',
+      '상황 메모:',
+      (v('notes') || '-'),
+      '',
+      '(소환장 사진은 이 메일에 첨부했습니다 / 첨부 예정입니다)'
+    ];
+    lastText = lines.join('\n');
+    var subject = '[소환 점검] ' + (v('biz') || v('name') || '문의') + ' · ' + (v('zip') || '');
+    var href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lastText);
+    copyBtn.hidden = false;
+    status.textContent = '메일 앱이 열립니다. 사진을 첨부해 보내주세요.';
+    window.location.href = href;
+  });
+
+  copyBtn.addEventListener('click', function () {
+    if (!lastText) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(lastText).then(function () {
+        status.textContent = '복사했습니다. 메일 앱에 붙여넣으세요.';
+      }, function () { status.textContent = '복사가 막혔습니다. 직접 선택해 복사해 주세요.'; });
+    } else {
+      status.textContent = '이 브라우저에서는 자동 복사가 안 됩니다.';
+    }
+  });
+})();
+</script>
+</body>
+</html>
