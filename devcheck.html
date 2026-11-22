@@ -5,7 +5,7 @@
 iframe{background:#fff;border:1px solid #999}
 pre{padding:8px;white-space:pre-wrap}</style></head>
 <body>
-<div class="row">
+<div class="row" style="flex-wrap:wrap">
   <iframe id="f1" src="/summonsdesk/ko/" width="390" height="844"></iframe>
   <iframe id="f2" src="/summonsdesk/" width="390" height="844"></iframe>
   <iframe id="f3" src="/summonsdesk/ko/intake.html" width="390" height="844"></iframe>
@@ -28,6 +28,10 @@ function measure(id){
 }
 window.addEventListener("load", function(){
   setTimeout(function(){
+    ["f1","f2","f3"].forEach(function(id){
+      var f=document.getElementById(id);
+      try{ f.height=f.contentDocument.documentElement.scrollHeight+10; }catch(e){}
+    });
     var res=["f1","f2","f3"].map(measure);
     document.getElementById("out").textContent=JSON.stringify(res,null,1);
     window.__RESULT__=res;
